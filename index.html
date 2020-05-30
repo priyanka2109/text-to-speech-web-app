@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-    body{
-     background-image: url('voice.jpg');
 
-    }
-</style>
+
 <head>
+     <link rel="stylesheet" href="{{url_for('static', filename='borders.css')}}" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Text to Speech web App</title>
 </head>
-<body>
-    
-    Select Voice: <select id='voiceList'></select> <br><br>
 
-    <input id='txtInput' /> <br><br>    
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+  </style>
+
+<body>
+<video width="400" height="400" autoplay>
+  <source src="mat.mp4" type="video/mp4">
+  <source src="mat.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+
+
+
+<h1>Select Voice:</h1> <select id='voiceList'></select> <br><br>
+
+
+    <input id='txtInput' alt text="Write what you want to listen" /> <br><br>
     <button id='btnSpeak'>Speak!</button>
 
     <script>
@@ -58,4 +79,5 @@
         }
     </script>
 </body>
+
 </html>
