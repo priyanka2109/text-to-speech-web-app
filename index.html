@@ -8,39 +8,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Text to Speech web App</title>
+
 </head>
 
-<style>
-    body {
-      margin: 0;
-      padding: 0;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
 
 
-  </style>
 
 <body>
-<video width="400" height="400" autoplay>
-  <source src="mat.mp4" type="video/mp4">
-  <source src="mat.ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
+<video width=100% height=100% controls>
+    <source src="{{url_for('static',filename='mat.mp4')}}" type="video/mp4">
 
+    Your browser does not support the video tag.
+  </video>
 
 
 
 <h1>Select Voice:</h1> <select id='voiceList'></select> <br><br>
 
 
-    <input id='txtInput' alt text="Write what you want to listen" /> <br><br>
+    <input id='txtInput'  /> <br><br>
     <button id='btnSpeak'>Speak!</button>
 
     <script>
+
+
         var txtInput = document.querySelector('#txtInput');
         var voiceList = document.querySelector('#voiceList');
         var btnSpeak = document.querySelector('#btnSpeak');
