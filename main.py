@@ -8,7 +8,7 @@ app = Flask(__name__, static_folder='static')
 @app.route("/")
 def home():
     return render_template("index.html")
-@app.route("/about")
+@app.route("/About")
 def about():
     return render_template("About.html")
 
